@@ -121,7 +121,7 @@ function install(cb) {
         cb = function() {};
 
     var myPackageJson = require('./package.json');
-    var version = myPackageJson.version;
+    var version = myPackageJson.praatVersion;
     var osinfo = getOsInfo();
     var url = praatDownloadUrl(osinfo, version);
 
