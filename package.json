@@ -1,6 +1,6 @@
 {
   "name": "praat",
-  "version": "5.4.6",
+  "version": "5.4.6-4",
   "praatVersion": "5.4.06",
   "description": "A simple, cross-platform NPM installer for Praat",
   "author": {
