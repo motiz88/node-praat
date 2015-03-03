@@ -1,6 +1,6 @@
 {
   "name": "praat",
-  "version": "5.4.06",
+  "version": "5.4.6-1",
   "description": "A simple, cross-platform NPM installer for Praat",
   "author": {
     "name": "Moti Zilberman",
@@ -30,6 +30,6 @@
   },
   "optionalDependencies": {
     "tar": "^1.0.3",
-    "unzip": "^0.1.11"    
+    "unzip": "^0.1.11"
   }
 }
