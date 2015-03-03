@@ -1,0 +1,35 @@
+{
+  "name": "praat",
+  "version": "5.4.06",
+  "description": "A simple, cross-platform NPM installer for Praat",
+  "author": {
+    "name": "Moti Zilberman",
+    "email": "motiz88@gmail.com"
+  },
+  "scripts": {
+    "install": "node install.js",
+    "start": "node index.js"
+  },
+  "main": "lib/praat.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motiz88/node-praat"
+  },
+  "bugs": {
+    "url": "https://github.com/motiz88/node-praat/issues"
+  },
+  "keywords": [
+    "node",
+    "praat",
+    "npm"
+  ],
+  "devDependencies": {},
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^0.16.4"
+  },
+  "optionalDependencies": {
+    "tar": "^1.0.3",
+    "unzip": "^0.1.11"    
+  }
+}
