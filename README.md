@@ -4,7 +4,7 @@ A cross-platform [NPM][1] installer for [Praat][2], for use in [node.js][3] prog
 ## How to install
 
 ```bash
-npm install motiz88/node-praat
+npm install praat
 ```
 
 ## Usage
