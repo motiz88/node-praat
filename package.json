@@ -1,7 +1,7 @@
 {
   "name": "praat",
-  "version": "5.4.6-5",
-  "praatVersion": "5.4.06",
+  "version": "5.4.8",
+  "praatVersion": "5.4.08",
   "description": "A simple, cross-platform NPM installer for Praat",
   "author": {
     "name": "Moti Zilberman",
