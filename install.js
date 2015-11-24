@@ -137,7 +137,7 @@ function install(cb) {
 
 
     function workDirCleanup() {
-        fse.removeSync(workDir);
+        setImmediate(function() {fse.removeSync(workDir);});
     }
 
     fse.ensureDirSync(workDir);
