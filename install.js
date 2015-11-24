@@ -3,7 +3,7 @@ var fse = require('fs-extra')
 var http = require('./follow-redirects-http-https');
 var path = require('path');
 
-var praatRepo = 'http://www.fon.hum.uva.nl/praat/';
+var praatRepo = 'https://github.com/praat/praat/releases/download/';
 
 var getOsInfo = require('./lib/info').getOsInfo;
 if (process.argv[2] === 'osinfo' && process.argv.length >= 4)
@@ -42,7 +42,7 @@ function praatPackageName(osinfo, version) {
 }
 
 function praatDownloadUrl(osinfo, version) {
-    return praatRepo + praatPackageName(osinfo, version);
+    return praatRepo + 'v' + version + '/' + praatPackageName(osinfo, version);
 }
 
 function praatExecFilename(osinfo, version) {
