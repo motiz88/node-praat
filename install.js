@@ -37,7 +37,7 @@ function praatPlatformPkgSuffix(osinfo) {
 
 function praatPackageName(osinfo, version) {
     var rawVersion = version.replace(/\./g, '');
-    var praat = praatExecName(osinfo);
+    var praat = praatExecName(osinfo, version);
     return praat + rawVersion + praatPlatformPkgSuffix(osinfo, version);
 }
 
@@ -45,8 +45,8 @@ function praatDownloadUrl(osinfo, version) {
     return praatRepo + praatPackageName(osinfo, version);
 }
 
-function praatExecFilename(osinfo) {
-    return praatExecName(osinfo) + execFileExt(osinfo);
+function praatExecFilename(osinfo, version) {
+    return praatExecName(osinfo, version) + execFileExt(osinfo);
 }
 
 function unpack(pkgfile, destDir, cb) {
@@ -81,7 +81,7 @@ function unpack(pkgfile, destDir, cb) {
     }
 }
 
-function installPkgFile(pkgfile, targetDir, osinfo, cb) {
+function installPkgFile(pkgfile, targetDir, osinfo, version, cb) {
     if (typeof cb !== 'function')
         cb = function() {};
     try {
@@ -90,7 +90,7 @@ function installPkgFile(pkgfile, targetDir, osinfo, cb) {
 
         fse.ensureDirSync(targetDir);
 
-        var execFilename = praatExecFilename(osinfo);
+        var execFilename = praatExecFilename(osinfo, version);
         var praatUnpackedExecPath = unpackDir + path.sep + execFilename;
         var praatTargetExecPath = targetDir + path.sep + execFilename;
 
@@ -128,7 +128,7 @@ function install(cb) {
     var workDir = __dirname + path.sep + 'dl';
     var targetDir = __dirname + path.sep + 'node_modules/.bin';
     var pkgfile = workDir + path.sep + praatPackageName(osinfo, version);
-    var execFilename = praatExecFilename(osinfo);
+    var execFilename = praatExecFilename(osinfo, version);
     var praatTargetExecPath = targetDir + path.sep + execFilename;
     if (fs.existsSync(praatTargetExecPath)) {
         cb();
@@ -147,7 +147,7 @@ function install(cb) {
             try {
                 if (err)
                     throw err;
-                installPkgFile(pkgfile, targetDir, osinfo, function(err) {
+                installPkgFile(pkgfile, targetDir, osinfo, version, function(err) {
                     try {
                         if (err)
                             throw err;
