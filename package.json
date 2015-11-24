@@ -9,7 +9,7 @@
   },
   "scripts": {
     "install": "node install.js",
-    "start": "node index.js"
+    "test": "node test.js"
   },
   "main": "lib/praat.js",
   "repository": {

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "stable"
+  - "4.1"
+  - "4.0"
+  - "0.12"
+  - "iojs"
+addons:
+  apt:
+    packages:
+    - libgtk2.0.0
+    - libasound2
+sudo: false
