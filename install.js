@@ -1,6 +1,6 @@
 var fs = require('fs');
 var fse = require('fs-extra')
-var http = require('http');
+var http = require('./follow-redirects-http-https');
 var path = require('path');
 
 var praatRepo = 'http://www.fon.hum.uva.nl/praat/';
