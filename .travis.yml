@@ -6,13 +6,13 @@ node_js:
   - "0.12"
   - "iojs"
 addons:
-  sources:
-    - ubuntu-toolchain-r-test
   apt:
+    sources:
+      - ubuntu-toolchain-r-test  
     packages:
     - libgtk2.0-0
     - libasound2
     - libpulse0
     - libstdc++6
-    - g++-4.8    
+    - g++-4.8
 sudo: false
