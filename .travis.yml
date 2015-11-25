@@ -6,6 +6,8 @@ node_js:
   - "0.12"
   - "iojs"
 addons:
+  sources:
+    - ubuntu-toolchain-r-test
   apt:
     packages:
     - libgtk2.0-0
