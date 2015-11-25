@@ -14,4 +14,5 @@ addons:
     - libasound2
     - libpulse0
     - libstdc++6
+    - g++-4.8    
 sudo: false
