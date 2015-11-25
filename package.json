@@ -9,7 +9,7 @@
   },
   "scripts": {
     "install": "node install.js",
-    "test": "node test.js"
+    "test": "mocha"
   },
   "main": "lib/praat.js",
   "repository": {
@@ -24,7 +24,11 @@
     "praat",
     "npm"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-string": "^1.1.4",
+    "mocha": "^2.3.4"
+  },
   "license": "MIT",
   "dependencies": {
     "follow-redirects": "0.0.7",
