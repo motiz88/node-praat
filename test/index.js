@@ -25,6 +25,8 @@ describe('installed praat executable', function() {
 	});
 	it('should be version ' + version, function() {
 		var spawnResult = child_process.spawnSync(praat, ['--version']);
+		expect(spawnResult.error).to.be.empty;
+		expect(spawnResult.stderr.toString()).to.be.empty;
 		var reportedPraatVersion = spawnResult.stdout.toString();
 		expect(reportedPraatVersion).to.be.a('string').and.startWith('Praat ' + version);
 	});	
