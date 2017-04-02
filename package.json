@@ -27,15 +27,15 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-string": "^1.1.4",
-    "mocha": "^2.3.4"
+    "mocha": "^3.2.0"
   },
   "license": "MIT",
   "dependencies": {
-    "follow-redirects": "0.0.7",
-    "fs-extra": "^0.16.4"
+    "follow-redirects": "1.2.3",
+    "fs-extra": "^2.1.2"
   },
   "optionalDependencies": {
-    "tar": "^1.0.3",
+    "tar": "^2.2.1",
     "unzip": "^0.1.11"
   }
 }
