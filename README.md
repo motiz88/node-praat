@@ -1,4 +1,6 @@
 # node-praat
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/motiz88/node-praat.svg)](https://greenkeeper.io/)
 A cross-platform [NPM][1] installer for [Praat][2], for use in [node.js][3] programs. This package is aimed at developers/users of Praat scripts wishing to integrate them easily with Node.
 
 ## How to install
